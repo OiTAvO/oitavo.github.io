@@ -41,5 +41,14 @@
 		</div>
 		<div class="col-3"></div>
 	</div>
+	<script>	
+    	let a = document.getElementsByName("tabs");
+        for (let i = 0; i < a.lenght; i++) {
+            a[i].addEventListener("click", (i+1) => {
+                let section = document.getElementById(`content${i}`);
+                section.style.display = "block";
+            });
+	}
+	</script>
 </body>
 </html>
