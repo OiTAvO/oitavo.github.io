@@ -2,13 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Otávio Augusto</title>
 	<link rel="stylesheet" type="text/css" href="./CSS/style.css"></link>
 </head>
 <body>
-	<div class="header">
-		<p>Teste do Cabeçalho</p>
+	<header>
+		<div class="h-list">
+			<ul>
+				<li>
+					<input id="tab1" name="tabs" type="radio" value="curriculum" checked/>
+					<label for="tab1">Curriculum</label>
+				</li>
+				<li>
+					<input id="tab2" name="tabs" type="radio"/>
+					<label for="tab2">Sobre Mim</label>
+				</li>
+				<li>
+					<input id="tab3" name="tabs" type="radio"/>
+					<label for="tab3">Projetos</label>
+				</li>
+			</ul>
+		</div>
+	</header>
+	
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-6">
+			<section id="content1" class="tab-content">
+				<h1>Curriculum</h1>
+			</section>
+			<section id="content2" class="tab-content">
+				<h1>Sobre mim</h1>
+			</section>
+			<section id="content3" class="tab-content">
+				<h1>Projetos</h1>
+			</section>
+		</div>
+		<div class="col-3"></div>
 	</div>
 </body>
 </html>
