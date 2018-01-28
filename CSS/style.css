@@ -15,9 +15,12 @@
 .col-11 { width: 91.66%;}
 .col-12 { width: 100%;}
 
-[class*="col-"] {
-		float: left;
-		padding: 15px;
+@media only screen and (max-width: 768px) {
+		/* para telas menores que 768px */
+		[class*="col-"] {
+				float: left;
+				padding: 15px;
+		}		
 }
 
 .row::after {
@@ -25,3 +28,21 @@
 		clear: both;
 		display: table;
 }
+
+.header {
+		background-color: #24292E;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		color: rgba(255, 255, 255, 0.75);
+}
+
+.header li {
+		padding-left: 8px;
+		padding-right: 8px;
+}
+
+.header li:hover {
+		cursor: pointer;
+		colo: rgba(255, 255, 255, 1);
+}
+
