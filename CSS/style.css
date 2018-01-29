@@ -1,0 +1,95 @@
+* {
+		box-sizing: border-box;
+		margin: 0;
+}
+
+[class*="col-"] {
+		float: left;
+		padding: 15px;
+}
+
+[class*="col-"] {
+		width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+		/* Grid */
+		.col-1 { width: 8.33%;}
+		.col-2 { width: 16.66%;}
+		.col-3 { width: 25%;}
+		.col-4 { width: 33.33%;}
+		.col-5 { width: 41.66%;}
+		.col-6 { width: 50%;}
+		.col-7 { width: 58.33%;}
+		.col-8 { width: 66.66%;}
+		.col-9 { width: 75%;}
+		.col-10 { width: 83.33%;}
+		.col-11 { width: 91.66%;}
+		.col-12 { width: 100%;}		
+}
+
+
+.row::after {
+		content: "";
+		clear: both;
+		display: table;
+}
+
+/* Definições do header*/
+header{
+		background-color: #24292E;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		color: rgba(255, 255, 255, 0.75);
+
+}
+
+.h-list {
+		/* Definições do menu */
+		line-height: 14px;
+		font-size: 14px !important;
+		max-width: 1020px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 8px;
+		padding-bottom: 8px;
+}
+
+.h-list ul {
+		/* Definições ul list  */
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0px;
+		overflow: hidden;
+		display: table;
+}
+
+.h-list li {
+		/* Definições dos items do menu  */
+		padding-left: 8px;
+		padding-right: 8px;
+		display: inline;
+}
+
+.h-list input {
+		display: none;
+}
+
+.h-list label:hover {
+		/* Definições Hover sobre os itens do menu  */
+		cursor: pointer;
+		color: rgba(255, 255, 255, 1);
+}
+
+section {
+		display: none;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+ 		display: block;
+}
+
+
