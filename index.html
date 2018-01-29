@@ -42,7 +42,7 @@
 		<div class="col-3"></div>
 	</div>
 	<script>	
-    	let a = document.getElementsByName("tabs");
+    	var a = document.getElementsByName("tabs");
         for (let i = 0; i < a.lenght; i++) {
             a[i].addEventListener("click", () => {
                 let section = document.getElementById(`content${i+1}`);
