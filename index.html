@@ -11,7 +11,7 @@
 		<div class="h-list">
 			<ul>
 				<li>
-					<input id="tab1" name="tabs" type="radio" value="curriculum" checked/>
+					<input id="tab1" name="tabs" type="radio" checked="true"/>
 					<label for="tab1">Curriculum</label>
 				</li>
 				<li>
@@ -29,17 +29,27 @@
 	<div class="row">
 		<div class="col-3"></div>
 		<div class="col-6">
-			<section id="content1" class="tab-content">
+			<p id="paragrafo"> OTAVIO</p>
+			<section id="conteudo1" class="tab-content">
 				<h1>Curriculum</h1>
 			</section>
-			<section id="content2" class="tab-content">
+			<section id="conteudo2" class="tab-content">
 				<h1>Sobre mim</h1>
 			</section>
-			<section id="content3" class="tab-content">
+			<section id="conteudo3" class="tab-content">
 				<h1>Projetos</h1>
 			</section>
 		</div>
 		<div class="col-3"></div>
 	</div>
+	<script>
+		var a = document.getElementsByName("tabs");
+		for(let i = 0; i < a.length; i++) {
+				a[i].addEventListener("click", () => {
+						let section = document.getElementById(`conteudo${i+1}`);
+						section.style.display = (a[i].checked === "true")? "block": "none";
+				});
+		}
+	</script>
 </body>
 </html>

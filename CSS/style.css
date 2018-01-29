@@ -73,6 +73,8 @@ header{
 }
 
 .h-list input {
+		clear: both;
+		padding-top: 10px;
 		display: none;
 }
 
@@ -83,17 +85,10 @@ header{
 }
 
 section {
+		clear: both;
+		padding-top: 10px;
 		display: none;
 }
 
-/* #tab1:checked ~ #content1, */
-/* #tab2:checked ~ #content2, */
-/* #tab3:checked ~ #content3 { */
-/* 		display: block; */
-/* } */
-
-#tab1:checked ~ #content1 {
-		display: block;
-}
 
 
