@@ -37,12 +37,22 @@
 }
 
 /* Definições do header*/
-header{
+header, footer{
 		background-color: #24292E;
 		padding-top: 12px;
 		padding-bottom: 12px;
 		color: rgba(255, 255, 255, 0.75);
+}
 
+footer{
+		height: 54px;
+		bottom: 0px;
+}
+
+footer p {
+		position: relative;
+		bottom: 8px;
+		padding-left:8px;
 }
 
 .h-list {
@@ -82,14 +92,17 @@ header{
 		color: rgba(255, 255, 255, 1);
 }
 
-section {
+.tab-content {
 		display: none;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 10px;
+		padding: 15px;
 }
 
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3 {
- 		display: block;
+.min-h {
+		min-height: calc(100vh - 115px);
 }
+
 
 

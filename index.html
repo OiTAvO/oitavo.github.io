@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Otávio Augusto</title>
-	<link rel="stylesheet" type="text/css" href="./CSS/style.css"></link>
+	<link rel="stylesheet" type="text/css" href="./CSS/style.css"/>
 </head>
 <body>
 	<header>
@@ -25,12 +25,13 @@
 			</ul>
 		</div>
 	</header>
-	
-	<div class="row">
-		<div class="col-3"></div>
-		<div class="col-6">
+	<div class="row min-h">
+		<div class="col-2"></div>
+		<div class="col-8">
 			<section id="content1" class="tab-content">
 				<h1>Curriculum</h1>
+				
+				
 			</section>
 			<section id="content2" class="tab-content">
 				<h1>Sobre mim</h1>
@@ -39,16 +40,37 @@
 				<h1>Projetos</h1>
 			</section>
 		</div>
-		<div class="col-3"></div>
+		<div class="col-2"></div>
 	</div>
+	<footer>
+		<div class="h-list">
+			<p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;width:88px;height:31px"
+							 src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+							 alt="CSS válido!" />
+				</a>
+			</p>
+		</div>
+	</footer>
 	<script>	
-    	var a = document.getElementsByName("tabs");
-        for (let i = 0; i < a.lenght; i++) {
-            a[i].addEventListener("click", () => {
-                let section = document.getElementById(`content${i+1}`);
-                section.style.display = (a[i].checked === "true")? "block": "none";
-            });
-	}
+		var tabsList = document.getElementsByName("tabs");
+		for(let i = 0; i < tabsList.length; i++) {
+				tabsList[i].addEventListener("click", conteudo);
+		}
+
+		window.onload = () => {
+				tabsList[0].checked = "true";
+				conteudo();
+		};
+
+		function conteudo() {
+				let tabs = tabsList;
+				for(let count = 0; count < tabs.length; count++) {
+						let section = document.getElementById(`content${count+1}`);
+						section.style.display = (tabs[count].checked)?"block": "none";
+				} 
+		 }
 	</script>
 </body>
 </html>
