@@ -5,7 +5,7 @@
 
 [class*="col-"] {
 		float: left;
-		padding: 15px;
+		padding: 15px;		
 }
 
 [class*="col-"] {
@@ -37,16 +37,21 @@
 }
 
 /* Definições do header*/
-header, footer{
-		background-color: #24292E;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		color: rgba(255, 255, 255, 0.75);
+header{
+    background-color: #24292E;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-footer{
-		height: 54px;
-		bottom: 0px;
+footer {
+    background-color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16.66%;
+    padding-right: 16.66%;
+    height: 54px;
+    border-top: 1px solid #DDD;
 }
 
 footer p {
@@ -91,18 +96,25 @@ footer p {
 		cursor: pointer;
 		color: rgba(255, 255, 255, 1);
 }
-
-.tab-content {
-		display: none;
-		border-style: solid;
-		border-width: 1px;
-		border-radius: 10px;
-		padding: 15px;
+.conteudo {
+    min-height: 800px;
+    padding: 15px;
+    border-left: 1px solid #ccc;
 }
 
-.min-h {
-		min-height: calc(100vh - 115px);
+.right-sidebar {
+    background-color: #DDD;
+    float: right;
+    padding: 15px;
 }
 
+.foto-cv{
+    text-align: center;
+}
 
+.foto-cv img{    
+    width: 50%;
+    height: 50%;
+    margin-bottom: 15px;
+}
 
