@@ -140,12 +140,13 @@ footer p {
 
 .skill {
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 .skill-bar {
     display: block;
+    padding: 0;
     background-color: #DDD;
     float: right;
-    margin-right: 10%;
-    width: 70%;
 }
+
