@@ -137,3 +137,15 @@ footer p {
 .contato li {
     list-style-type: none;
 }
+
+.skill {
+    margin-left: 5%;
+}
+
+.skill-bar {
+    display: block;
+    background-color: #DDD;
+    float: right;
+    margin-right: 10%;
+    width: 70%;
+}
