@@ -126,7 +126,8 @@ footer p {
     background-color: #5174b4;
     padding: 15px;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .contato a {
@@ -134,8 +135,16 @@ footer p {
     text-decoration: none;
 }
 
+.contato ul {
+    padding-left: 0;
+}
+
 .contato li {
     list-style-type: none;
+}
+
+.contato li:hover {
+    font-size: 15px;    
 }
 
 .skills {
@@ -146,19 +155,24 @@ footer p {
 		margin-bottom: 0;
 }
 
-.skill{
+
+
+.skill>[class*="col-"]{
     display: block;
+    padding: 0px;
+    margin-top: 15px;
 }
 
 .bar {
     background-color: #DDD;
 		padding: 0px;
-		margin-top: 15px;
+		border-radius: 9px;
 }
 
 .skill-bar {
-		background-color: #333;
+		background-color: #5174b4;
 		width: 1%;
+		border-radius: 9px;
 }
 
 

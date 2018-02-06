@@ -67,17 +67,38 @@
 	Magna velit maecenas porta ut eget per vel pharetra tristique risus odio habitasse consequat fames id turpis, egestas interdum habitant a blandit vel senectus tristique accumsan malesuada lorem vel nibh commodo et. dictumst placerat eget nisi neque primis vehicula est cras, duis per massa ut ipsum porta ante. commodo sociosqu dui ligula rhoncus dui platea et magna, taciti sem dui fringilla dolor ultrices vivamus justo, auctor integer purus arcu vitae praesent porta. sem dictumst aliquet blandit eros senectus inceptos hendrerit, mollis rhoncus convallis taciti erat ante, curabitur quisque at eu conubia cras. 
 	    </p>
 	    <br/>
-			<div class="skills">
-				<div class="skill row">
-					<div class="col-3">JavaScript:</div>
-					<div class="bar col-9">
-						<div class="skill-bar" value="50">&nbsp;</div>
-					</div>
-				</div>
-				<div class="skill row">
-					<div class="col-3">HTML5:</div>
-				</div>
-			</div>
+	    <div class="skills">
+	      <div class="skill row">
+		<div class="col-3">JavaScript:</div>
+		<div class="bar col-9">
+		  <div class="skill-bar" value="60">&nbsp;</div>
+		</div>
+	      </div>
+	      <div class="skill row">
+		<div class="col-3">HTML5:</div>
+		<div class="bar col-9">
+		  <div class="skill-bar" value="50">&nbsp;</div>
+		</div>
+	      </div>
+	      <div class="skill row">
+		<div class="col-3">CSS:</div>
+		<div class="bar col-9">
+		  <div class="skill-bar" value="45">&nbsp;</div>
+		</div>
+	      </div>
+	      <div class="skill row">
+		<div class="col-3">C#:</div>
+		<div class="bar col-9">
+		  <div class="skill-bar" value="55">&nbsp;</div>
+		</div>
+	      </div>
+	      <div class="skill row">
+		<div class="col-3">C++:</div>
+		<div class="bar col-9">
+		  <div class="skill-bar" value="30">&nbsp;</div>
+		</div>
+	      </div>
+	    </div>
 	</section>
 	<section id="content2" class="tab-content">
 	  <div class="conteudo col-8">
@@ -132,15 +153,13 @@
 
 			function changeBar(skill) {
 					var count = skill.getAttribute("value");
-					var width = 1;
-					var interval = setInterval(progress(),15);
+							   var width = 1;
+							   progress();
 					function progress(){
-							console.log(width);
-							if (width <= count) {
+							   if (width <= count) {
 									skill.style.width = `${width}%`;
-									width++;
-							} else {
-									clearInterval(interval);
+									width += 1;
+									requestAnimationFrame(progress);
 							}
 					}
 			}
