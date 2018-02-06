@@ -138,15 +138,28 @@ footer p {
     list-style-type: none;
 }
 
-.skill {
-    margin-left: 5%;
-    margin-right: 5%;
+.skills {
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+}
+
+.skill{
+    display: block;
+}
+
+.bar {
+    background-color: #DDD;
+		padding: 0px;
+		margin-top: 15px;
 }
 
 .skill-bar {
-    display: block;
-    padding: 0;
-    background-color: #DDD;
-    float: right;
+		background-color: #333;
+		width: 1%;
 }
+
+
 

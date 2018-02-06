@@ -67,18 +67,17 @@
 	Magna velit maecenas porta ut eget per vel pharetra tristique risus odio habitasse consequat fames id turpis, egestas interdum habitant a blandit vel senectus tristique accumsan malesuada lorem vel nibh commodo et. dictumst placerat eget nisi neque primis vehicula est cras, duis per massa ut ipsum porta ante. commodo sociosqu dui ligula rhoncus dui platea et magna, taciti sem dui fringilla dolor ultrices vivamus justo, auctor integer purus arcu vitae praesent porta. sem dictumst aliquet blandit eros senectus inceptos hendrerit, mollis rhoncus convallis taciti erat ante, curabitur quisque at eu conubia cras. 
 	    </p>
 	    <br/>
-	    <div class="skill">
-	      <p id="skill_1">JavaScript:<span class="skill-bar col-9" value="50">&nbsp;</span></p>
-	      <br/>
-	      <p id="skill_2">HTML5:<span class="skill-bar col-9" value="75">&nbsp;</span></p>
-	      <br/>
-	      <p id="skill_3">CSS:<span class="skill-bar col-9" value="40">&nbsp;</span></p>
-	      <br/>
-	      <p id="skill_4">C#:<span class="skill-bar col-9" value="30">&nbsp;</span></p>
-	      <br/>
-	      <p id="skill_5">C++:<span class="skill-bar col-9" value="45">&nbsp;</span></p>
-	    </div>
-	  </div>
+			<div class="skills">
+				<div class="skill row">
+					<div class="col-3">JavaScript:</div>
+					<div class="bar col-9">
+						<div class="skill-bar" value="50">&nbsp;</div>
+					</div>
+				</div>
+				<div class="skill row">
+					<div class="col-3">HTML5:</div>
+				</div>
+			</div>
 	</section>
 	<section id="content2" class="tab-content">
 	  <div class="conteudo col-8">
@@ -105,24 +104,49 @@
       </div>
     </footer>
     <script>	
-      var tabsList = document.getElementsByName("tabs");
-      for(let i = 0; i < tabsList.length; i++) {
-			 tabsList[i].addEventListener("click", conteudo);
-			 }
-			 
-			 window.onload = () => {
-	tabsList[0].checked = "true";
-	conteudo();
-	};
-	
-	function conteudo() {
-	let tabs = tabsList;
-	for(let count = 0; count < tabs.length; count++) {
-				   let section = document.getElementById(`content${count+1}`);
-				   section.style.display = (tabs[count].checked)?"block": "none";
-				   } 
-				   }
-				   
-				   </script>
+			var tabsList = document.getElementsByName("tabs");
+			for(let i = 0; i < tabsList.length; i++) {
+					tabsList[i].addEventListener("click", conteudo);
+			}
+			
+			window.onload = () => {
+					tabsList[0].checked = "true";
+					conteudo();
+					skillbar();
+			};
+			
+			function conteudo() {
+					let tabs = tabsList;
+					for(let count = 0; count < tabs.length; count++) {
+							let section = document.getElementById(`content${count+1}`);
+							section.style.display = (tabs[count].checked)?"block": "none";
+					} 
+			}
+
+			function skillbar() {
+					let skill = document.getElementsByClassName("skill-bar");
+					for(let i = 0; i < skill.length; ++i) {
+							changeBar(skill[i]);
+					}
+			}
+
+			function changeBar(skill) {
+					var count = skill.getAttribute("value");
+					var width = 1;
+					var interval = setInterval(progress(),15);
+					function progress(){
+							console.log(width);
+							if (width <= count) {
+									skill.style.width = `${width}%`;
+									width++;
+							} else {
+									clearInterval(interval);
+							}
+					}
+			}
+
+			
+			
+		</script>
   </body>
 </html>
