@@ -99,6 +99,7 @@
 		</div>
 	      </div>
 	    </div>
+	  </div>
 	</section>
 	<section id="content2" class="tab-content">
 	  <div class="conteudo col-8">
@@ -125,47 +126,47 @@
       </div>
     </footer>
     <script>	
-			var tabsList = document.getElementsByName("tabs");
-			for(let i = 0; i < tabsList.length; i++) {
-					tabsList[i].addEventListener("click", conteudo);
-			}
-			
-			window.onload = () => {
-					tabsList[0].checked = "true";
-					conteudo();
-					skillbar();
-			};
-			
-			function conteudo() {
-					let tabs = tabsList;
-					for(let count = 0; count < tabs.length; count++) {
-							let section = document.getElementById(`content${count+1}`);
-							section.style.display = (tabs[count].checked)?"block": "none";
-					} 
-			}
-
-			function skillbar() {
-					let skill = document.getElementsByClassName("skill-bar");
-					for(let i = 0; i < skill.length; ++i) {
-							changeBar(skill[i]);
-					}
-			}
-
-			function changeBar(skill) {
-					var count = skill.getAttribute("data-value");
-							   var width = 1;
-							   progress();
-					function progress(){
-							   if (width <= count) {
-									skill.style.width = `${width}%`;
-									width += 1;
-									requestAnimationFrame(progress);
-							}
-					}
-			}
-
-			
-			
-		</script>
+      var tabsList = document.getElementsByName("tabs");
+      for(let i = 0; i < tabsList.length; i++) {
+			 tabsList[i].addEventListener("click", conteudo);
+			 }
+			 
+			 window.onload = () => {
+	tabsList[0].checked = "true";
+	conteudo();
+	skillbar();
+	};
+	
+	function conteudo() {
+	let tabs = tabsList;
+	for(let count = 0; count < tabs.length; count++) {
+				   let section = document.getElementById(`content${count+1}`);
+				   section.style.display = (tabs[count].checked)?"block": "none";
+				   } 
+				   }
+				   
+				   function skillbar() {
+				   let skill = document.getElementsByClassName("skill-bar");
+				   for(let i = 0; i < skill.length; ++i) {
+						      changeBar(skill[i]);
+						      }
+						      }
+						      
+						      function changeBar(skill) {
+						      var count = skill.getAttribute("data-value");
+						      var width = 1;
+						      progress();
+						      function progress(){
+						      if (width <= count) {
+								   skill.style.width = `${width}%`;
+								   width += 1;
+								   requestAnimationFrame(progress);
+								   }
+								   }
+								   }
+								   
+								   
+								   
+								   </script>
   </body>
 </html>
